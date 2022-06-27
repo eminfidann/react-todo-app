@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TodoList } from "./TodoList";
 import { AddTodoForm } from "./AddTodoForm";
+import "./todo.scss";
 
 const initialTodos: Todo[] = [];
 
@@ -27,8 +28,12 @@ function App() {
 
   return (
     <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <AddTodoForm addTodo={addTodo} />
+      <main>
+        <div className="create-new">
+          <AddTodoForm addTodo={addTodo} />
+          <TodoList todos={todos} toggleTodo={toggleTodo} />
+        </div>
+      </main>
     </>
   );
 }

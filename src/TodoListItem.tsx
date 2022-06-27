@@ -13,6 +13,7 @@ export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
       >
         <input
           type="checkbox"
+          className="todoCheckbox"
           checked={todo.complete}
           onClick={() => {
             toggleTodo(todo);
